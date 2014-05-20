@@ -32,11 +32,19 @@ class UsersController < ApplicationController
 
 	#edit
 	def edit
-		end
+		@user = User.find(params[:id])
+	end
 
 	#update
 	def update
-		end
+		@user = User.find(params[:id])
+
+		if @user.update(params[:user].permit(:username, :password, :email))
+		    redirect_to @user
+		  else
+		    render 'edit'
+  		end
+	end
 
 	#destroy
 	def destroy
