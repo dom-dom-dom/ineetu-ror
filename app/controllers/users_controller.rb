@@ -19,15 +19,13 @@ class UsersController < ApplicationController
 		    redirect_to @user
 		  else
 		    render 'new'
-		  end
-		  
+		  end  
 	end
 
 
 	#new
 	def new
 		@user = User.new
-	
 	end
 
 	#edit
@@ -48,6 +46,10 @@ class UsersController < ApplicationController
 
 	#destroy
 	def destroy
-		end
+		@user = User.find(params[:id])
+		  @user.destroy
+		 
+		  redirect_to users_path
+	end
 
 end
