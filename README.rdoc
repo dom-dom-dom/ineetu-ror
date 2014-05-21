@@ -14,3 +14,4 @@
 * User can sort lists and tasks with drag-and-drop
 
 ### Current Features
+* Can CRUD users
