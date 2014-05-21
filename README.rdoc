@@ -1,28 +1,17 @@
-== README
+# iNeetu
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## A Ruby on Rails To-Do list App
 
-Things you may want to cover:
+### Project Roadmap
 
-* Ruby version
+* User can log in with username or password
+* User can see a listing of saved to-do lists and option to add new list
+* User can view tasks related to list
+* User can add new tasks or toggle items as completed/pending
+* User can categorize, provide due date, and add priority to tasks
+* User can add descriptions to both lists and tasks
+* User can edit or delete existing tasks and lists
+* User can sort lists and tasks with drag-and-drop
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+### Current Features
+* Can CRUD users
