@@ -1,14 +1,16 @@
-= iNeetu
+# iNeetu
 
-== A Ruby on Rails To-Do list App
+## A Ruby on Rails To-Do list App
 
-Project Goals
+### Project Roadmap
 
 * User can log in with username or password
 * User can see a listing of saved to-do lists and option to add new list
 * User can view tasks related to list
 * User can add new tasks or toggle items as completed/pending
-* User can categorize task and add priority
+* User can categorize, provide due date, and add priority to tasks
 * User can add descriptions to both lists and tasks
 * User can edit or delete existing tasks and lists
 * User can sort lists and tasks with drag-and-drop
+
+### Current Features
