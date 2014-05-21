@@ -1,8 +1,8 @@
 <% @users.each do |user| %>
    
-    <p> username: <%= user.username %><br/>
-     email: <%= user.email %>     <%= link_to 'Destroy', user_path(user),
-                    method: :delete, data: { confirm: 'Are you sure?' } %></p>
+	<p> username: <%= user.username %><br/>
+	 email: <%= user.email %>     
+	 <%= link_to 'Destroy', user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %>
+	</p>
 
-   
-  <% end %>
+<% end %>

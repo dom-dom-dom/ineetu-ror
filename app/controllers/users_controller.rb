@@ -3,12 +3,12 @@ class UsersController < ApplicationController
 	#index
 	def index
 		@users = User.all
-	  end
+	end
 
 	#show
 	def show
 		@user = User.find(params[:id])
-	  end
+	end
 	  
 	#create
 	def create
@@ -17,9 +17,9 @@ class UsersController < ApplicationController
 
 		if @user.save
 		    redirect_to @user
-		  else
-		    render 'new'
-		  end  
+		else
+		  	render 'new'
+		end  
 	end
 
 
@@ -38,18 +38,17 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 
 		if @user.update(params[:user].permit(:username, :password, :email))
-		    redirect_to @user
-		  else
-		    render 'edit'
+		   redirect_to @user
+		else
+		   render 'edit'
   		end
 	end
 
 	#destroy
 	def destroy
 		@user = User.find(params[:id])
-		  @user.destroy
-		 
-		  redirect_to users_path
+		@user.destroy
+		redirect_to users_path
 	end
 
 end

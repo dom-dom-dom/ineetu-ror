@@ -2,17 +2,19 @@
 <p>Dominic's Amazing To-Do list app</p>
 
 <%= form_for :users do |f| %>
-<p>
-    <%= f.label :username %><br>
-    <%= f.text_field :username %>
-  </p>
 
-  <p>
-    <%= f.label :password %><br>
-    <%= f.text_field :password %>
-  </p>
+	<p>
+		<%= f.label :username %><br>
+		<%= f.text_field :username %>
+	</p>
 
-<p>
-	<%= f.submit('Login') %>
-</p>
+	  <p>
+	    <%= f.label :password %><br>
+	    <%= f.text_field :password %>
+	  </p>
+
+	<p>
+		<%= f.submit('Login') %>
+	</p>
+
 <% end %>
