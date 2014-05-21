@@ -1,7 +1,8 @@
-# iNeetu
-## A Ruby on Rails To-Do list App
+= iNeetu
 
-### Project Goals
+== A Ruby on Rails To-Do list App
+
+Project Goals
 
 * User can log in with username or password
 * User can see a listing of saved to-do lists and option to add new list
