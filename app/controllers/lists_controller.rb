@@ -10,22 +10,14 @@ class ListsController < ApplicationController
 
   #create
   def create
-
     @user = User.find(params[:user_id])
-    @list = @user.lists.create(list_params)
-    redirect_to user_path(@user)
-  
-
-  private
-    def list_params
-      params.require(:title).permit(:description)
-    end
+    @list = @user.lists.create(params[:list].permit(:title, :description))
   end
 
    
-
   #new
   def new
+    @user = User.find(params[:user_id])
     end
 
   #edit
