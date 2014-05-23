@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
-
   resources :users do 
     resources :lists, only: [:index, :new, :create]
   end
-    resources :lists, only: [:show, :edit, :update, :destroy] do 
-      resources :tasks
-    end
+  
+  resources :lists, only: [:show, :edit, :update, :destroy] do 
+    resources :tasks
+  end
   
   # resources :users do
   #   resources :lists do
