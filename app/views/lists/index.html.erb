@@ -1,1 +1,13 @@
 <h2>View All Lists</h2>
+
+<% @user.lists.each do |list| %>
+  <p>
+    <strong>List Title:</strong>
+    <%= list.title %>
+  </p>
+ 
+  <p>
+    <strong>List Description:</strong>
+    <%= list.description %>
+  </p>
+<% end %>
