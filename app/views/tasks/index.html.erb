@@ -1,0 +1,19 @@
+<h2>View All Tasks</h2>
+
+<% @list.tasks.each do | task| %>
+  <p>
+    <strong>Task Title:</strong>
+    <%= task.title %>
+  </p>
+ 
+  <p>
+    <strong>Task Description:</strong>
+    <%= task.description %>
+  </p>
+
+  <p>
+    <strong>Priority:</strong>
+    <%= task.priority %>
+  </p>
+
+<% end %>

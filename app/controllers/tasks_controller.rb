@@ -1,19 +1,25 @@
 class TasksController < ApplicationController
 
-  #index
+   #index
   def index
+    @list = List.find(params[:list_id])
     end
 
   #show
   def show
+     @task = Task.find(params[:id])
     end
 
   #create
   def create
-    end
+    @list = List.find(params[:list_id])
+    @task = @list.tasks.create(params[:task].permit(:title, :description, :priority))
+  end
 
+   
   #new
   def new
+    @list = List.find(params[:list_id])
     end
 
   #edit

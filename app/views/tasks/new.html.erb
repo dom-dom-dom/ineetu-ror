@@ -1,0 +1,24 @@
+<h2>Add Task to List</h2>
+
+<%= form_for([@list, @list.tasks.build]) do |f| %>
+
+	<p>
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+	</p>
+
+	  <p>
+	    <%= f.label :description %><br>
+	    <%= f.text_area :description %>
+	  </p>
+
+	  <p>
+	    <%= f.label :priority %><br>
+	    <%= f.text_area :priority %>
+	  </p>
+
+	<p>
+		<%= f.submit('Add Task') %>
+	</p>
+
+<% end %>

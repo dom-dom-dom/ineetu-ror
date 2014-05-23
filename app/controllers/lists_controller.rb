@@ -2,7 +2,7 @@ class ListsController < ApplicationController
 
   #index
   def index
-     @user = User.find(params[:user_id])
+    @user = User.find(params[:user_id])
     end
 
   #show
@@ -13,7 +13,7 @@ class ListsController < ApplicationController
   #create
   def create
     @user = User.find(params[:user_id])
-    # @lists = List.find(params[:user_id])
+    @list = @user.lists.create(params[:list].permit(:title, :description))
   end
 
    
