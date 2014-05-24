@@ -3,12 +3,12 @@ class TasksController < ApplicationController
    #index
   def index
     @list = List.find(params[:list_id])
-    end
+  end
 
   #show
   def show
      @task = Task.find(params[:id])
-    end
+  end
 
   #create
   def create
@@ -20,7 +20,7 @@ class TasksController < ApplicationController
   #new
   def new
     @list = List.find(params[:list_id])
-    end
+  end
 
   #edit
   def edit

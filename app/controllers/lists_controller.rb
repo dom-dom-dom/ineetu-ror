@@ -20,15 +20,23 @@ class ListsController < ApplicationController
   #new
   def new
     @user = User.find(params[:user_id])
-    end
+  end
 
   #edit
   def edit
-    end
+    @list = List.find(params[:id])
+  end
 
   #update
   def update
-    end
+    @list = List.find(params[:id])
+
+    if @list.update(params[:list].permit(:title, :description))
+       redirect_to @list
+    else
+       render 'edit'
+      end
+  end
     
   #destroy
   def destroy
