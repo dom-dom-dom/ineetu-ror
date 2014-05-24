@@ -1,4 +1,5 @@
 <h2>View All Lists</h2>
+<%= link_to 'New List', new_user_list_path(@user) %>
 
 <% @user.lists.each do |list| %>
   <p>
@@ -11,6 +12,8 @@
     <%= list.description %>
   </p>
 
+  <%= link_to 'View', list_path(list) %> |
+  <%= link_to 'Add tasks', new_list_task_path(list) %> |
   <%= link_to 'Edit', edit_list_path(list) %> |
   <%= link_to 'Destroy', list_path(list), method: :delete, data: { confirm: 'Are you sure?' } %>
   

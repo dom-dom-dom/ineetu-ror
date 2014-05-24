@@ -1,4 +1,5 @@
 <h2>View All Tasks</h2>
+<%= link_to 'Add new task', new_list_task_path %>
 
 <% @list.tasks.each do | task| %>
   <p>
@@ -16,6 +17,7 @@
     <%= task.priority %>
   </p>
 
+  <%= link_to 'Edit', edit_list_task_path(@list,task) %> |
   <%= link_to 'Destroy', list_task_path(@list, task), method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <% end %>
