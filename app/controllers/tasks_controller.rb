@@ -16,6 +16,11 @@ class TasksController < ApplicationController
     @task = @list.tasks.create(params[:task].permit(:title, :description, :priority))
   end
 
+  #new
+  def new
+    @list = List.find(params[:list_id])
+  end
+
    
   #edit
   def edit
