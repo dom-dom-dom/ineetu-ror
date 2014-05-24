@@ -40,8 +40,8 @@ class ListsController < ApplicationController
     
   #destroy
   def destroy
-    @list = List.find(params[:id])
-    # @user = List.select('user_id')
+    @user = User.find(params[:user_id])
+    @List = @list.users.find(params[:id])
     @list.destroy
     redirect_to list_path
   end
