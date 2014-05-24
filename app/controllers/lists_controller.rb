@@ -40,6 +40,10 @@ class ListsController < ApplicationController
     
   #destroy
   def destroy
-    end
+    @list = List.find(params[:id])
+    @user = List.select('user_id')
+    @list.destroy
+    redirect_to list_path
+  end
 
 end

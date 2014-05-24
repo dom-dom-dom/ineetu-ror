@@ -1,3 +1,13 @@
 <h2>View Single List</h2>
 
-this is show file
+
+<strong>List Title:</strong>
+  <%= @list.title %>
+</p>
+ 
+<p>
+  <strong>List Description:</strong>
+  <%= @list.description %>
+</p>
+
+<%= link_to 'Destroy', user_lists_path(@user), method: :delete, data: { confirm: 'Are you sure?' } %>
